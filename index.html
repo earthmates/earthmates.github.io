@@ -1,7 +1,51 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EarthMates</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
   <body>
-    <h1>EarthMates</h1>
-    <p>Coming soon!</p>
+    <div class="container">
+      <h1 class="logo">EarthMates</h1>
+      <div class="content">
+        <p>Website Is Under Maintenance</p>
+        <h1>We're <span>Launching</span> Soon</h1>
+        <div class="email-form">
+          <input
+            type="email"
+            id="emailInput"
+            placeholder="Enter your email address"
+          />
+          <button type="button" onclick="sendEmail()">
+            <span>Get notified</span> <img src="assets/triangle.png" />
+          </button>
+        </div>
+      </div>
+      <img src="assets/rocket.png" class="rocket" />
+    </div>
+
+    <script>
+      function sendEmail() {
+        var emailInput = document.getElementById("emailInput");
+        var emailAddress = emailInput.value;
+
+        // Validate email format
+        var emailRegex = /\S+@\S+\.\S+/;
+        if (!emailRegex.test(emailAddress)) {
+          alert("Please enter a valid email address.");
+          return;
+        }
+
+        // Send email
+        var emailContent = emailAddress + " has subscribed.";
+        // Here you would place the code to actually send the email.
+        // For demonstration purposes, we'll just log the email content.
+        console.log("Email content:", emailContent);
+
+        // Reset input field
+        emailInput.value = "";
+      }
+    </script>
   </body>
 </html>
