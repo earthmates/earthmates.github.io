@@ -13,8 +13,6 @@
 }
 
 .logo {
-  position: absolute;
-  z-index: 2;
   width: 120px;
   padding: 20px 0;
   cursor: pointer;
@@ -80,6 +78,20 @@
   font-weight: 600;
 }
 
+.launch-time {
+  position: relative;
+  display: flex;
+}
+
+.launch-time div {
+  flex-basis: 100px;
+  margin-bottom: 20px;
+}
+
+.launch-time div p {
+  font-size: 90px;
+  margin-right: 20px;
+}
 /* .rocket {
   width: 250px;
   position: absolute;
@@ -98,3 +110,4 @@
     opacity: 1;
   }
 } */
+
