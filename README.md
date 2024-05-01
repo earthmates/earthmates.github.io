@@ -4,6 +4,8 @@
     <img height="100" src="./src/assets/logo.svg">  
 </div>
 
+<br>
+
 ---
 
 ### EarthMates Official Website
