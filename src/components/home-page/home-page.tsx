@@ -200,8 +200,6 @@ export const HomePage = ({ className }: HomePageProps) => {
             investment opportunities across various industries and stages.
           </p>
           <br />
-          <br />
-          <br />
           <div className={styles.list}>
             <div className={styles.row}>
               <img src={PurpleStarIcon} alt="tick" />
