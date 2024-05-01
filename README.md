@@ -1,5 +1,5 @@
 <div align="center">  
-    <img height="80" src="./src/assets/logo.svg">  
+    <img height="100" src="./src/assets/logo.svg">  
 </div>
 
 ### EarthMates Official Website
