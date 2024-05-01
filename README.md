@@ -2,6 +2,8 @@
     <img height="100" src="./src/assets/logo.svg">  
 </div>
 
+---
+
 ### EarthMates Official Website
 
 To view the website visit [https://earthmates.de/](https://earthmates.de/)
