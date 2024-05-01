@@ -1,3 +1,5 @@
+<br>
+
 <div align="center">  
     <img height="100" src="./src/assets/logo.svg">  
 </div>
