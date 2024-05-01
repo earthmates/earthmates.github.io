@@ -1,14 +1,14 @@
-import classNames from 'classnames';
-import styles from './header.module.scss';
-import { Link, NavLink } from 'react-router-dom';
-import { Button } from '../button/button';
-import Logo from '../../assets/landing_page/logo.svg';
-import Button_module from '../button/button.module.scss';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import React, { useState, useEffect } from 'react';
+import classNames from "classnames";
+import styles from "./header.module.scss";
+import { Link, NavLink } from "react-router-dom";
+import { Button } from "../button/button";
+import Logo from "../../assets/landing_page/logo.svg";
+import Button_module from "../button/button.module.scss";
+import { FaBars, FaTimes } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
 
 export interface HeaderProps {
-    className?: string;
+  className?: string;
 }
 
 /**
@@ -16,112 +16,126 @@ export interface HeaderProps {
  * To create custom component templates, see https://help.codux.com/kb/en/article/kb16522
  */
 export const Header = ({ className }: HeaderProps) => {
-    const [isMobile, setIsMobile] = useState<boolean>(false);
-    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 907);
-        };
-
-        handleResize();
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
-    useEffect(() => {
-        if (isMenuOpen) {
-            // Prevent scrolling of the page when the menu is open
-            document.body.style.overflow = 'hidden';
-        } else {
-            // Restore scrolling of the page when the menu is closed
-            document.body.style.overflow = 'auto';
-        }
-    }, [isMenuOpen]);
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 907);
     };
 
-    const handleClickLogo = () => {
-        if (isMenuOpen) {
-            setIsMenuOpen(false);
-        }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
     };
+  }, []);
 
-    return (
-        <div className={classNames(styles.root, className)}>
-            <div className={styles.logo}>
-                <Link to="/" onClick={handleClickLogo}>
-                    <img src={Logo} alt="Logo" />
-                </Link>
-            </div>
-            {isMobile ? (
-                <button onClick={toggleMenu}>{isMenuOpen ? <FaTimes /> : <FaBars />}</button>
-            ) : (
-                <div className={styles.menu}>
-                    <NavLink
-                        to="/startups"
-                        className={({ isActive }) => classNames({ [styles.active]: isActive })}
-                    >
-                        For Startups
-                    </NavLink>
+  useEffect(() => {
+    if (isMenuOpen) {
+      // Prevent scrolling of the page when the menu is open
+      document.body.style.overflow = "hidden";
+    } else {
+      // Restore scrolling of the page when the menu is closed
+      document.body.style.overflow = "auto";
+    }
+  }, [isMenuOpen]);
 
-                    <NavLink
-                        to="/investors"
-                        className={({ isActive }) => classNames({ [styles.active]: isActive })}
-                    >
-                        For Investors
-                    </NavLink>
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
-                    <NavLink
-                        to="/resources"
-                        className={({ isActive }) => classNames({ [styles.active]: isActive })}
-                    >
-                        Resources
-                    </NavLink>
-                </div>
-            )}
-            <div className={styles.login}>
-                <a href="http://192.168.0.125:5174" className={styles['login-button']}>
-                    Login
-                </a>
-                <Button buttonText="Get Started" />
-            </div>
+  const handleClickLogo = () => {
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  };
 
-            {isMobile && isMenuOpen && (
-                <div className={styles.overlay} onClick={toggleMenu}>
-                    <NavLink
-                        to="/startups"
-                        className={({ isActive }) => classNames({ [styles.active]: isActive })}
-                    >
-                        For Startups
-                    </NavLink>
+  return (
+    <div className={classNames(styles.root, className)}>
+      <div className={styles.logo}>
+        <Link to="/" onClick={handleClickLogo}>
+          <img src={Logo} alt="Logo" />
+        </Link>
+      </div>
+      {isMobile ? (
+        <button onClick={toggleMenu}>
+          {isMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      ) : (
+        <div className={styles.menu}>
+          <NavLink
+            to="/startups"
+            className={({ isActive }) =>
+              classNames({ [styles.active]: isActive })
+            }
+          >
+            For Startups
+          </NavLink>
 
-                    <NavLink
-                        to="/investors"
-                        className={({ isActive }) => classNames({ [styles.active]: isActive })}
-                    >
-                        For Investors
-                    </NavLink>
+          <NavLink
+            to="/investors"
+            className={({ isActive }) =>
+              classNames({ [styles.active]: isActive })
+            }
+          >
+            For Investors
+          </NavLink>
 
-                    <NavLink
-                        to="/resources"
-                        className={({ isActive }) => classNames({ [styles.active]: isActive })}
-                    >
-                        Resources
-                    </NavLink>
-
-                    <hr />
-                    <a href="/login" className={styles['login-button']}>
-                        Login
-                    </a>
-                    <Button buttonText="Get Started" />
-                </div>
-            )}
+          <NavLink
+            to="/resources"
+            className={({ isActive }) =>
+              classNames({ [styles.active]: isActive })
+            }
+          >
+            Resources
+          </NavLink>
         </div>
-    );
+      )}
+      <div className={styles.login}>
+        <a href="http://192.168.0.125:5174" className={styles["login-button"]}>
+          Login
+        </a>
+        <Button buttonText="Get Started" />
+      </div>
+
+      {isMobile && isMenuOpen && (
+        <div className={styles.overlay} onClick={toggleMenu}>
+          <NavLink
+            to="/startups"
+            className={({ isActive }) =>
+              classNames({ [styles.active]: isActive })
+            }
+          >
+            For Startups
+          </NavLink>
+
+          <NavLink
+            to="/investors"
+            className={({ isActive }) =>
+              classNames({ [styles.active]: isActive })
+            }
+          >
+            For Investors
+          </NavLink>
+
+          <NavLink
+            to="/resources"
+            className={({ isActive }) =>
+              classNames({ [styles.active]: isActive })
+            }
+          >
+            Resources
+          </NavLink>
+
+          <hr />
+          <a href="/login" className={styles["login-button"]}>
+            Login
+          </a>
+          <Button buttonText="Get Started" />
+        </div>
+      )}
+    </div>
+  );
 };
