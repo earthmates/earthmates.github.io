@@ -1,0 +1,144 @@
+@import '@styles/theme.module.scss';
+
+.root {
+    padding-left: 6em;
+    padding-right: 6em;
+    background-color: #0b0b09;
+
+    @media only screen and (max-width: $mobile-width) {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 18em;
+    align-items: center;
+    padding-top: 5em;
+    padding-bottom: 4em;
+    color: white;
+
+    @media only screen and (max-width: $mobile-width) {
+        flex-direction: column;
+        row-gap: 2em;
+    }
+}
+
+.logo {
+    color: white;
+    margin-bottom: 2em;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 10em;
+    padding-right: 10em;
+
+    @media only screen and (max-width: $mobile-width) {
+        padding: 2em;
+        column-gap: 3em;
+    }
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.25em;
+    row-gap: 1em;
+}
+
+.social {
+    display: flex;
+    height: 30px;
+    column-gap: 0.8em;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.small {
+    margin-top: 1.5em;
+    color: white;
+    margin-bottom: 1.5em;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.email {
+    display: flex;
+    flex-direction: row;
+    background-color: #202020;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 1.5em;
+    height: 2.5em;
+    width: 20em;
+}
+
+input {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+}
+
+input::placeholder {
+    opacity: 0.5;
+    color: white;
+}
+.sectionh2 {
+    font-weight: 700;
+    font-size: 20px;
+}
+.col {
+    height: 100%;
+}
+.mail-text {
+    text-align: start;
+    width: 100%;
+}
+
+.h1 {
+    font-family: $header-font;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.p {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.p1 {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    color: #a7b6c1;
+}
+.register {
+}
+.copyright {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    text-align: center;
+
+    @media only screen and (max-width: $mobile-width) {
+        width: 80%;
+    }
+}
+
+.copyright .p {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    color: #a7b6c1;
+    margin-bottom: 1.5em;
+}

@@ -1,0 +1,515 @@
+@import '@styles/theme.module.scss';
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+    background-color: transparent;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url('/src/assets/landing_page/background_image.png');
+}
+
+.hero .title {
+    font-size: 70px;
+    color: #ffffff;
+    font-family: $header-font;
+    font-weight: 700;
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-top: 2em;
+    text-align: center;
+
+    @media only screen and (max-width: $mobile-width) {
+        font-size: 2.5rem;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 1em;
+    }
+}
+
+.hero .paragraph {
+    width: 50%;
+    color: #a7b6c1;
+    font-size: 18px;
+    font-family: $paragraph-font;
+
+    @media only screen and (max-width: $mobile-width) {
+        font-size: 0.8rem;
+        width: 70%;
+        margin: 1.5em 15%;
+    }
+    text-align: center;
+    margin: 1.5em 25%;
+}
+
+.hero .call-to-action {
+    display: flex;
+    justify-content: center;
+    padding-top: 2.5em;
+    padding-bottom: 5em;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    column-gap: 1.2em;
+    background-color: #0b0b09;
+    padding-right: 6em;
+    padding-left: 6em;
+
+    @media only screen and (max-width: $mobile-width) {
+        padding-right: 1em;
+        padding-left: 1em;
+        flex-direction: column;
+        row-gap: 1em;
+    }
+}
+
+.cards {
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    padding: 2.5em;
+}
+
+.cards .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.cards .header img {
+    width: 4em;
+    margin-right: 2em;
+}
+
+.cards .header .h1 {
+    font-family: $header-font;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0em 0em 0.3em;
+}
+
+.cards .header .p {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.cards .paragraph {
+    margin-top: 0.5em;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.icon-row {
+    background-color: #0b0b09;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    row-gap: 10em;
+    padding-right: 6em;
+    padding-left: 6em;
+    padding-top: 8em;
+    padding-bottom: 5em;
+
+    @media only screen and (max-width: $mobile-width) {
+        flex-wrap: wrap;
+        gap: 2em 2em;
+        padding-right: 1em;
+        padding-left: 1em;
+        padding-top: 3em;
+        padding-bottom: 2em;
+    }
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    width: 25%;
+
+    @media only screen and (max-width: $mobile-width) {
+        width: calc(50% - 1em);
+    }
+}
+
+.icon-container img {
+    width: 4em;
+}
+
+.icon-container .description {
+    margin-left: 0.85em;
+}
+
+.icon-container .description .h2 {
+    font-family: $paragraph-font;
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 0.4em;
+}
+
+.icon-container .description .p {
+    font-family: $paragraph-font;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.features {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: stretch;
+}
+
+.features .h1 {
+    font-family: $header-font;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 1.5em;
+}
+
+.features .p {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.features .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    row-gap: 2em;
+    margin-top: 3.5em;
+    margin-bottom: 3.5em;
+}
+
+.features .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1.5em;
+}
+
+.features .row img {
+    width: 3.5em;
+}
+
+.features .row .p {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin: auto;
+}
+
+.features-startup {
+    height: auto;
+    width: 50%;
+    padding-top: 2em;
+    padding-left: 12em;
+    padding-right: 4em;
+    padding-bottom: 6em;
+    background-color: #ffeedf;
+
+    @media only screen and (max-width: $mobile-width) {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
+.features-investor {
+    padding: 2em 0;
+    height: auto;
+    width: 50%;
+    padding-left: 4em;
+    padding-right: 12em;
+    padding-bottom: 6em;
+    background-color: #e0dfea;
+
+    @media only screen and (max-width: $mobile-width) {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7.5em;
+    padding-bottom: 6em;
+    padding-left: 6em;
+    padding-right: 6em;
+    background-color: #f6f6f6;
+
+    @media only screen and (max-width: $mobile-width) {
+        padding-right: 1em;
+        padding-left: 1em;
+        padding-bottom: 2em;
+        row-gap: 3em;
+    }
+}
+
+.mission {
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.mission .h1 {
+    font-family: $header-font;
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 3.5em;
+    margin-bottom: 1em;
+
+    @media only screen and (max-width: $mobile-width) {
+        margin-top: 1em;
+    }
+}
+
+.mission .p {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 1em;
+    color: #474747;
+
+    @media only screen and (max-width: $mobile-width) {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+.mission-image {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0em;
+    margin-left: 0em;
+    padding-top: 0em;
+    padding-bottom: 2em;
+    padding-right: 5em;
+    padding-left: 5em;
+
+    @media only screen and (max-width: $mobile-width) {
+        padding-bottom: 0.25em;
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+}
+
+.vision {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    @media only screen and (max-width: $mobile-width) {
+        flex-direction: column;
+        row-gap: 2em;
+    }
+}
+
+.vision-text {
+    padding: 2.5em;
+    background-color: #ff8516;
+    width: 50%;
+    height: fit-content;
+    margin: auto;
+    border-radius: 5px;
+
+    @media only screen and (max-width: $mobile-width) {
+        width: 100%;
+    }
+}
+
+.vision-text .h1 {
+    font-family: $header-font;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+.vision-text .p {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 2.5em;
+}
+
+.vision-image {
+    width: 50%;
+
+    @media only screen and (max-width: $mobile-width) {
+        width: 100%;
+    }
+}
+
+.values {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    row-gap: 2.5em;
+}
+
+.values .h1 {
+    font-family: $header-font;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.value-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1em;
+
+    @media only screen and (max-width: $mobile-width) {
+        flex-wrap: wrap;
+        gap: 1em 1em;
+        padding-right: 1em;
+        padding-left: 1em;
+        padding-top: 3em;
+        padding-bottom: 2em;
+    }
+}
+
+.value-cards .card {
+    padding: 1.25em;
+    width: 25%;
+    background-color: #ffeedf;
+    border-radius: 10px;
+
+    @media only screen and (max-width: $mobile-width) {
+        width: calc(50% - 1em);
+    }
+}
+
+.value-cards .card .h1 {
+    font-family: $header-font;
+    font-size: 26px;
+    font-weight: 600;
+    color: #ff8516;
+    margin-bottom: 0.75em;
+}
+
+.value-cards .card .p {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.team {
+}
+
+.team .h1 {
+    font-family: $header-font;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+.team .p {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 2.5em;
+}
+
+.team-members {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1em;
+
+    @media only screen and (max-width: $mobile-width) {
+        flex-wrap: wrap;
+        gap: 1em 1em;
+        padding-right: 1em;
+        padding-left: 1em;
+        padding-top: 3em;
+        padding-bottom: 2em;
+    }
+}
+
+.team-members .member {
+    width: 25%;
+
+    @media only screen and (max-width: $mobile-width) {
+        width: calc(50% - 1em);
+    }
+}
+
+.team-members .member .description {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.team-members .member .description img {
+    width: 2em;
+}
+
+.team-members .member .description .name {
+    height: fit-content;
+    width: 90%;
+}
+
+.team-members .member .description .name .h1 {
+    font-family: $header-font;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0.25em;
+}
+
+.team-members .member .description .name .p {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 0em;
+}
+
+.next-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0;
+    background-color: #e0dfea;
+    border-radius: 5px;
+}
+
+.next-step .h1 {
+    font-family: $header-font;
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.next-step .p {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #0b0b09;
+}
+
+.next-step .call-to-action {
+    padding-bottom: 0em;
+    margin-bottom: 2.5em;
+    margin-top: 2.5em;
+}
