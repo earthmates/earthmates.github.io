@@ -1,8 +1,8 @@
-import { createBoard } from '@wixc3/react-board';
-import { InvestorsPage } from '../../../components/investors-page/investors-page';
+import { createBoard } from "@wixc3/react-board";
+import { Investors } from "../../../components/investors/investors";
 
 export default createBoard({
-    name: 'InvestorsPage',
-    Board: () => <InvestorsPage />,
-    isSnippet: true,
+  name: "InvestorsPage",
+  Board: () => <Investors />,
+  isSnippet: true,
 });
