@@ -182,7 +182,11 @@
 .features .p {
   font-family: Helvetica, sans-serif;
   font-weight: 500;
-  margin-top: 0px;font-size:0.9em;overflow:visible;display:flex;flex-wrap:wrap;
+  margin-top: 0px;
+  font-size: 0.9em;
+  overflow: visible;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .features .list {
@@ -199,17 +203,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  column-gap: 1.5em;align-items:center;
+  column-gap: 1.5em;
+  align-items: center;
 }
 
 .features .row img {
-  width: 3.5em;display:flex;
+  width: 3.5em;
+  display: flex;
 }
 
 .features .row .p {
   font-family: Helvetica, sans-serif;
   font-weight: 500;
-  margin: auto;font-size:0.8em;
+  margin: auto;
+  font-size: 0.8em;
 }
 
 .features-startup {
@@ -422,6 +429,9 @@
   font-weight: 600;
   color: #ff8516;
   margin-bottom: 0.75em;
+  @media only screen and (max-width: 550px) {
+    font-size: 1em;
+  }
 }
 
 .value-cards .card .p {
