@@ -1,33 +1,36 @@
-import classNames from 'classnames';
-import styles from './button.module.scss';
-import React from 'react';
+import classNames from "classnames";
+import styles from "./button.module.scss";
+import React from "react";
+import { text } from "stream/consumers";
 
 export interface ButtonProps {
-    className?: string;
-    buttonText: string;
-    onClick?: () => void;
-    color?: string;
+  className?: string;
+  buttonText: string;
+  onClick?: () => void;
+  color?: string;
+  textColor?: string;
 }
 
 const defaultClick = () => {
-    window.location.href = 'http://192.168.0.125:5174';
+  window.location.href = "http://192.168.0.125:5174";
 };
 
 export const Button: React.FC<ButtonProps> = ({
-    className,
-    buttonText,
-    onClick,
-    color = '#ff8516', // Default color if not provided
+  className,
+  buttonText,
+  onClick,
+  color = "#ff8516", // Default color if not provided
+  textColor = "#ffffff", // Default color if not provided
 }: ButtonProps) => {
-    const handleClick = onClick || defaultClick;
+  const handleClick = onClick || defaultClick;
 
-    return (
-        <div
-            className={classNames(styles.root, className)}
-            onClick={handleClick}
-            style={{ backgroundColor: color }}
-        >
-            {buttonText}
-        </div>
-    );
+  return (
+    <div
+      className={classNames(styles.root, className)}
+      onClick={handleClick}
+      style={{ backgroundColor: color, color: textColor }}
+    >
+      {buttonText}
+    </div>
+  );
 };

@@ -270,7 +270,11 @@ export const HomePage = ({ className }: HomePageProps) => {
               supported by a global network of partners working together to
               create a fairer, more sustainable world
             </p>
-            <Button buttonText="Register Now" />
+            <Button
+              buttonText="Register Now"
+              color="#FFFFFF"
+              textColor="#001B2E"
+            />
           </div>
           <div className={styles["vision-image"]}>
             <img src={VisionImagePng} alt="" />

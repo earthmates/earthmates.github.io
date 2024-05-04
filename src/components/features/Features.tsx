@@ -66,7 +66,7 @@ const Features = () => {
           growth journey.
         </p>
 
-        <div className={styles.list}>
+        {/* <div className={styles.list}>
           <div className={styles.row}>
             <img src={OrangeStarIcon} alt="tick" />
             <p className={styles.p}>
@@ -95,7 +95,7 @@ const Features = () => {
               opportunities in African startups.
             </p>
           </div>
-        </div>
+        </div> */}
 
         <Button buttonText="Learn More" className={styles.learnMore_button} />
       </div>
@@ -108,7 +108,7 @@ const Features = () => {
           Earthmates provides access to a curated selection of investment
           opportunities across various industries and stages.
         </p>
-        <div className={styles.list}>
+        {/* <div className={styles.list}>
           <div className={styles.row}>
             <img src={PurpleStarIcon} alt="tick" />
             <p className={styles.p}>
@@ -137,9 +137,13 @@ const Features = () => {
               opportunities in African startups.
             </p>
           </div>
-        </div>
+        </div> */}
 
-        <Button buttonText="Learn More" className={styles.learnMore_button} />
+        <Button
+          buttonText="Learn More"
+          className={styles.learnMore_button}
+          color="#2F2B6F"
+        />
       </div>
       {/*<div className="tabHeader">
         <div className={startupView} onClick={() => tabClick("startup")}>
