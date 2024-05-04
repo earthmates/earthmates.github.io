@@ -82,15 +82,6 @@ export const Header = ({ className }: HeaderProps) => {
           >
             For Investors
           </NavLink>
-
-          <NavLink
-            to="/resources"
-            className={({ isActive }) =>
-              classNames({ [styles.active]: isActive })
-            }
-          >
-            Resources
-          </NavLink>
         </div>
       )}
       <div className={styles.login}>
@@ -118,15 +109,6 @@ export const Header = ({ className }: HeaderProps) => {
             }
           >
             For Investors
-          </NavLink>
-
-          <NavLink
-            to="/resources"
-            className={({ isActive }) =>
-              classNames({ [styles.active]: isActive })
-            }
-          >
-            Resources
           </NavLink>
 
           <hr />
