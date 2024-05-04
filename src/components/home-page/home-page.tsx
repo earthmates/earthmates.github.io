@@ -16,6 +16,7 @@ import LinkedinIcon from "../../assets/landing_page/linkedin.svg";
 import Button_module from "../button/button.module.scss";
 import MarcoPng from "../../assets/landing_page/marco.png";
 import MohamedPng from "../../assets/landing_page/mohamed.png";
+import Features from "../features/Features";
 
 export interface HomePageProps {
   className?: string;
@@ -147,6 +148,9 @@ export const HomePage = ({ className }: HomePageProps) => {
           </div>
         </div>
       </div>
+
+      <Features />
+      {/*
       <div className={styles.features}>
         <div className={styles["features-startup"]}>
           <h1 className={styles.h1}>Need Funding?</h1>
@@ -188,7 +192,7 @@ export const HomePage = ({ className }: HomePageProps) => {
               </p>
             </div>
           </div>
-          <Button buttonText="Learn More" />
+          <Button buttonText="Learn More" className={styles.learnMore_button} />
         </div>
         <div className={styles["features-investor"]}>
           <h1 className={styles.h1}>Looking to invest?</h1>
@@ -230,10 +234,11 @@ export const HomePage = ({ className }: HomePageProps) => {
               </p>
             </div>
           </div>
-
-          <Button buttonText="Learn More" />
+          <Button buttonText="Learn More" className={styles.learnMore_button} />
         </div>
       </div>
+              */}
+
       {/*  <div className={styles['connecting-card-container']}>
                 <div className={styles['connecting-card-left']}></div>
                 <div className={styles['connecting-card']}></div>
@@ -265,7 +270,11 @@ export const HomePage = ({ className }: HomePageProps) => {
               supported by a global network of partners working together to
               create a fairer, more sustainable world
             </p>
-            <Button buttonText="Register Now" />
+            <Button
+              buttonText="Register Now"
+              color="#FFFFFF"
+              textColor="#001B2E"
+            />
           </div>
           <div className={styles["vision-image"]}>
             <img src={VisionImagePng} alt="" />
