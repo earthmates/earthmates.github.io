@@ -14,6 +14,9 @@
 }
 
 .hero img {
+  @media (max-width: $mobile-width) {
+    visibility: hidden;
+  }
   width: 50%;
 }
 
