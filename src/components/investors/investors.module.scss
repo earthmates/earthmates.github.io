@@ -241,6 +241,10 @@
   justify-content: center;
   column-gap: 4em;
   margin-bottom: 5em;
+  @media (max-width: 1050px) {
+    margin-bottom: 2em;
+    column-gap: 2em;
+  }
 }
 
 .review .header .h1 {
@@ -261,30 +265,46 @@
 
 .review .container {
   display: flex;
-  align-items: start;
+  align-items: center;
   flex-direction: row;
   justify-content: center;
-  column-gap: 7em;
+  column-gap: 6em;
   width: 100%;
   padding-left: 3em;
   padding-right: 3em;
+
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1em;
+  }
 }
 
 .review .container .image {
   width: 50%;
+  @media (max-width: 1050px) {
+    width: 100%;
+  }
 }
 
 .review .container .text {
   padding-top: 0%;
   width: 50%;
+  @media (max-width: 1050px) {
+    width: 100%;
+  }
 }
 
 .review .container .h1 {
   font-family: Helvetica, sans-serif;
-  font-size: 32px;
+  font-size: 2em;
   font-weight: 400;
   color: black;
   margin-top: 3em;
+  @media (max-width: 1050px) {
+    margin-top: 1.2em;
+    font-size: 1.8em;
+  }
 }
 
 .review .container .p {
@@ -296,6 +316,9 @@
   margin-right: 0em;
   margin-bottom: 0em;
   margin-left: 0em;
+  @media (max-width: 1050px) {
+    margin-top: 0.8em;
+  }
 }
 
 //faq section
