@@ -4,20 +4,20 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  column-gap: 3em;
+  column-gap: 2.5em;
   padding-top: 6em;
   padding-bottom: 6em;
   padding-left: 6em;
-  padding-right: 6em;
+  padding-right: 3em;
   background-color: #0b0b09;
   color: white;
 }
 
 .hero img {
-  @media (max-width: $mobile-width) {
+  @media (max-width: 1050px) {
     visibility: hidden;
   }
-  width: 50%;
+  width: 60%;
 }
 
 .hero h1 {
@@ -62,7 +62,7 @@
 }
 
 .features .button {
-  margin: auto;
+  margin: 0 auto;
 }
 
 .features .h1 {
@@ -77,23 +77,28 @@
   font-weight: 300;
   width: 60%;
   color: #a7b6c1;
-  margin-bottom: 2.5em;
+  margin-bottom: 0.5em;
+  @media (min-width: $mobile-width) {
+    margin-bottom: 2.5em;
+  }
 }
 
 .features-cards {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
   column-gap: 1em;
 
   @media only screen and (max-width: $mobile-width) {
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 1em 1em;
     padding-right: 1em;
     padding-left: 1em;
     padding-top: 3em;
     padding-bottom: 2em;
+    margin-bottom: 1em;
   }
   width: 100%;
 }
@@ -106,7 +111,7 @@
   border-radius: 10px;
 
   @media only screen and (max-width: $mobile-width) {
-    width: calc(50% - 1em);
+    width: 100%;
   }
 }
 
