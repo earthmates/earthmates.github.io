@@ -285,54 +285,71 @@
   margin-left: 0em;
 }
 
+//faq section
+
 .faq {
-  padding: 5em;
   display: flex;
-  align-items: start;
-  flex-direction: row;
-  justify-content: start;
-  background-color: #f6f6f6;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 2em;
+  }
+  @media (min-width: $mobile-width) {
+    padding: 5em;
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    justify-content: start;
+    background-color: #f6f6f6;
+  }
 }
 
-.faq .header {
+.faq .title_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  row-gap: 0.25em;
-  text-align: start;
-  width: 50%;
-}
+  row-gap: 0.5em;
 
-.faq .header h1 {
-  font-family: $header-font;
-  font-size: 40px;
-  font-weight: 600;
-}
+  text-align: center;
 
-.faq .header p {
+  @media (min-width: $mobile-width) {
+    text-align: start;
+    width: 50%;
+    row-gap: 0.25em;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 2em;
+  }
+
+  .title {
+    font-family: $header-font;
+    font-size: 2em;
+    font-weight: 600;
+  }
+
+  .paragraph {
+    font-family: Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    color: #4a555c;
+    @media (min-width: $mobile-width) {
+      width: 50%;
+    }
+  }
+}
+.accordion_container {
   font-family: Helvetica, sans-serif;
-  font-size: 16px;
   font-weight: 300;
-  color: #4a555c;
-  width: 50%;
 }
 
-.faq .questions {
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-  justify-content: center;
-  column-gap: 2em;
-}
-
-.faq .questions h1 {
-  font-family: Helvetica, sans-serif;
-  font-size: 18px;
+.accordionSummary {
   font-weight: 600;
-  color: #001b2e;
-  margin-bottom: 2em;
 }
-
+//////////////////////////////////////////////////////////////////////////////////////////
 .next_steps {
   padding: 5em;
   background-color: #2f2b6f;

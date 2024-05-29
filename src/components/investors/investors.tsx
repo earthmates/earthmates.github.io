@@ -9,6 +9,12 @@ import FilevalidationIcon from "../../assets/investor_page/user-group.png";
 import IconSvg from "../../assets/investor_page/icon.svg";
 import ReviewSvg from "../../assets/startup_page/review.svg";
 
+//mui
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
 export interface InvestorsProps {
   className?: string;
 }
@@ -143,18 +149,94 @@ export const Investors = ({ className }: InvestorsProps) => {
         </div>
       </div>
       <div className={styles.faq}>
-        <div className={styles.header}>
-          <h1>FAQs</h1>
-          <p>
+        <div className={styles.title_container}>
+          <h1 className={styles.title}>FAQs</h1>
+          <p className={styles.paragraph}>
             Explore answers to commonly asked questions about investing with
             Earthmates.
           </p>
         </div>
-        <div className={styles.questions}>
-          <h1>Question 1</h1>
-          <h1>Question 2</h1>
-          <h1>Question 3</h1>
-          <h1>Question 4</h1>
+        <div
+          className={styles.accordion_container}
+          style={{ width: "70%", margin: "auto" }}
+        >
+          <Accordion>
+            <AccordionSummary
+              className={styles.accordionSummary}
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              How can I find investment opportunities on Earthmates?
+            </AccordionSummary>
+            <AccordionDetails>
+              Investors can discover investment opportunities on Earthmates by
+              browsing through curated profiles of African startups. Our
+              platform offers a wide range of projects across various
+              industries, allowing investors to explore opportunities that align
+              with their investment criteria and preferences.
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              className={styles.accordionSummary}
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+              id="panel2a-header"
+            >
+              What criteria does Earthmates use to match investors with
+              startups?
+            </AccordionSummary>
+            <AccordionDetails>
+              Earthmates matches investors with startups based on several
+              criteria including the investor's preferences, risk tolerance,
+              investment goals, industry focus, geographic location, and the
+              startup's stage of development, market potential, and alignment
+              with the investor's interests.
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              className={styles.accordionSummary}
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel3a-content"
+              id="panel3a-header"
+            >
+              Are there any fees associated with using Earthmates as an
+              investor?
+            </AccordionSummary>
+            <AccordionDetails>
+              As an investor using Earthmates, you typically won't encounter any
+              fees for accessing the platform or browsing the startups. However,
+              there might be fees associated with specific investment
+              transactions or additional services offered by Earthmates, so it's
+              essential to review their terms and conditions for any potential
+              costs.
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              className={styles.accordionSummary}
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel4a-content"
+              id="panel4a-header"
+            >
+              How does Earthmates ensure the quality and legitimacy of the
+              investment opportunities listed on the platform?
+            </AccordionSummary>
+            <AccordionDetails>
+              Earthmates employs various measures to ensure the quality and
+              legitimacy of the investment opportunities listed on its platform.
+              These measures may include thorough due diligence processes on
+              startups, verification of key information provided by startups,
+              background checks on founders and management teams, screening for
+              compliance with regulatory requirements, and implementing
+              mechanisms for investor feedback and ratings. Additionally,
+              Earthmates may leverage partnerships with trusted organizations,
+              advisors, and industry experts to validate the credibility of
+              listed opportunities.
+            </AccordionDetails>
+          </Accordion>
         </div>
       </div>
       <div className={styles.next_steps}>
