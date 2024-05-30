@@ -8,7 +8,7 @@
   padding-top: 6em;
   padding-bottom: 6em;
   padding-left: 6em;
-  padding-right: 3em;
+  padding-right: 5em;
   background-color: #0b0b09;
   color: white;
 }
@@ -139,10 +139,7 @@
 
 .difference {
   background-color: #f6f6f6;
-  padding-right: 4em;
-  padding-left: 4em;
-  padding-bottom: 3.5em;
-  padding-top: 3.5em;
+  padding: 3.5em 4em;
 }
 
 .difference .header {
@@ -228,10 +225,7 @@
 }
 
 .review {
-  padding-left: 5em;
-  padding-right: 5em;
-  padding-bottom: 5em;
-  padding-top: 5em;
+  padding: 5em;
 }
 
 .review .header {
@@ -256,7 +250,7 @@
 
 .review .header .p {
   font-family: Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 300;
   color: #4a555c;
   margin-top: 2em;
@@ -270,8 +264,6 @@
   justify-content: center;
   column-gap: 6em;
   width: 100%;
-  padding-left: 3em;
-  padding-right: 3em;
 
   @media only screen and (max-width: 1050px) {
     flex-direction: column;
@@ -372,6 +364,7 @@
     font-size: 1em;
     font-weight: 300;
     color: #4a555c;
+    margin: 0 5em;
     @media (min-width: $mobile-width) {
       width: 50%;
     }
