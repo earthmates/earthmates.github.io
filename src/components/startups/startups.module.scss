@@ -4,17 +4,20 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  column-gap: 3em;
+  column-gap: 2.5em;
   padding-top: 6em;
   padding-bottom: 6em;
   padding-left: 6em;
-  padding-right: 6em;
+  padding-right: 5em;
   background-color: #0b0b09;
   color: white;
 }
 
 .hero img {
-  width: 50%;
+  @media (max-width: 1050px) {
+    visibility: hidden;
+  }
+  width: 60%;
 }
 
 .hero h1 {
@@ -66,6 +69,11 @@
   text-align: center;
   row-gap: 2.5em;
   margin-top: 7em;
+  padding: 0 4em;
+
+  @media (max-width: $mobile-width) {
+    row-gap: 2em;
+  }
 }
 
 .features .h1 {
@@ -80,7 +88,11 @@
   font-weight: 300;
   width: 40%;
   color: #4a555c;
-  margin-bottom: 2.5em;
+  margin-bottom: 2em;
+  @media (max-width: $mobile-width) {
+    margin-bottom: 1em;
+    width: 100%;
+  }
 }
 
 .features-cards {
@@ -90,12 +102,9 @@
   column-gap: 1em;
 
   @media only screen and (max-width: $mobile-width) {
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 1em 1em;
-    padding-right: 1em;
-    padding-left: 1em;
-    padding-top: 3em;
-    padding-bottom: 2em;
   }
   width: 100%;
 }
@@ -108,7 +117,7 @@
   border-radius: 10px;
 
   @media only screen and (max-width: $mobile-width) {
-    width: calc(50% - 1em);
+    width: 100%;
   }
 }
 
@@ -442,6 +451,7 @@
     font-size: 1em;
     font-weight: 300;
     color: #4a555c;
+    margin: 0 5em;
     @media (min-width: $mobile-width) {
       width: 50%;
     }
@@ -455,8 +465,7 @@
 .accordionSummary {
   font-weight: 600;
 }
-////////////////////////////////////////////////////////////////////////////////////////////////
-
+//////////////////
 .next_steps {
   padding: 5em;
   background-color: #ff8516;
