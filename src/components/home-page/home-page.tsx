@@ -365,12 +365,12 @@ export const HomePage = ({ className }: HomePageProps) => {
             </div>
           </div>
         </div>
-        <div className={styles["next-step"]}>
-          <h1 className={styles.h1}>Ready to Take the Next Step</h1>
-          <p className={styles.p}>We will help you along the journey ahead</p>
-          <div className={styles["call-to-action"]}>
-            <Button buttonText="Get Started" />
-          </div>
+      </div>
+      <div className={styles["next-step"]}>
+        <h1 className={styles.h1}>Ready to Take the Next Step</h1>
+        <p className={styles.p}>We will help you along the journey ahead</p>
+        <div className={styles["call-to-action"]}>
+          <Button buttonText="Get Started" />
         </div>
       </div>
     </div>
