@@ -16,6 +16,10 @@ import LinkedinIcon from "../../assets/landing_page/linkedin.svg";
 import Button_module from "../button/button.module.scss";
 import MarcoPng from "../../assets/landing_page/marco.png";
 import MohamedPng from "../../assets/landing_page/mohamed.png";
+import FilipePng from "../../assets/landing_page/iflipe.jpg";
+import DanielPng from "../../assets/landing_page/adniel.jpg";
+import GhelaPng from "../../assets/landing_page/ghela.jpg";
+import AdePng from "../../assets/landing_page/dea.jpg";
 import Features from "../features/Features";
 
 export interface HomePageProps {
@@ -354,11 +358,43 @@ export const HomePage = ({ className }: HomePageProps) => {
               </div>
             </div>
             <div className={styles.member}>
-              <img src={JacopoPng} alt="" />
+              <img src={FilipePng} alt="" />
               <div className={styles.description}>
                 <div className={styles.name}>
-                  <h1 className={styles.h1}>Nil</h1>
-                  <p className={styles.p}>Nil</p>
+                  <h1 className={styles.h1}>Filipe Bertolucci</h1>
+                  <p className={styles.p}>Frontend Developer</p>
+                </div>
+                <img src={LinkedinIcon} alt="linkedin" />
+              </div>
+            </div>
+          </div>
+          <div className={styles["team-members"]}>
+            <div className={styles.member}>
+              <img src={GhelaPng} alt="" />
+              <div className={styles.description}>
+                <div className={styles.name}>
+                  <h1 className={styles.h1}>Francesco Ghelardi</h1>
+                  <p className={styles.p}>Backend Developer</p>
+                </div>
+                <img src={LinkedinIcon} alt="linkedin" />
+              </div>
+            </div>
+            <div className={styles.member}>
+              <img src={AdePng} alt="" />
+              <div className={styles.description}>
+                <div className={styles.name}>
+                  <h1 className={styles.h1}>Adedigba Adediwura</h1>
+                  <p className={styles.p}>UX/UI Designer</p>
+                </div>
+                <img src={LinkedinIcon} alt="linkedin" />
+              </div>
+            </div>
+            <div className={styles.member}>
+              <img src={DanielPng} alt="" />
+              <div className={styles.description}>
+                <div className={styles.name}>
+                  <h1 className={styles.h1}>Ujoh Daniel</h1>
+                  <p className={styles.p}>Costumer Relationships</p>
                 </div>
                 <img src={LinkedinIcon} alt="linkedin" />
               </div>
