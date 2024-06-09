@@ -14,6 +14,12 @@ import DesktopIcon from "../../assets/startup_page/desktop.svg";
 import IconSvg from "../../assets/startup_page/icon.svg";
 import ReviewSvg from "../../assets/startup_page/review.svg";
 
+//mui
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
 export interface StartupsProps {
   className?: string;
 }
@@ -164,18 +170,80 @@ export const Startups = ({ className }: StartupsProps) => {
         </div>
       </div>
       <div className={styles.faq}>
-        <div className={styles.header}>
-          <h1>FAQs</h1>
-          <p>
+        <div className={styles.title_container}>
+          <h1 className={styles.title}>FAQs</h1>
+          <p className={styles.paragraph}>
             Explore answers to commonly asked questions about investing with
             Earthmates.
           </p>
         </div>
-        <div className={styles.questions}>
-          <h1>Question 1</h1>
-          <h1>Question 2</h1>
-          <h1>Question 3</h1>
-          <h1>Question 4</h1>
+        <div
+          className={styles.accordion_container}
+          style={{ width: "70%", margin: "auto" }}
+        >
+          <Accordion>
+            <AccordionSummary
+              className={styles.accordionSummary}
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              How can I list my startup on Earthmates?
+            </AccordionSummary>
+            <AccordionDetails>
+              Listing your startup on Earthmates is easy. Simply sign up for an
+              account as a founder, complete your startup profile with relevant
+              information about your project, and submit it for review. Our team
+              will then evaluate your submission and notify you once your
+              startup is listed on the platform.
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              className={styles.accordionSummary}
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+              id="panel2a-header"
+            >
+              What criteria does Earthmates use to select startups for listing?
+            </AccordionSummary>
+            <AccordionDetails>
+              Earthmates uses a set of criteria including the uniqueness of the
+              idea, market potential, team strength, and sustainability impact
+              to select startups for listing.
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              className={styles.accordionSummary}
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel3a-content"
+              id="panel3a-header"
+            >
+              Is there a fee for listing my startup on Earthmates?
+            </AccordionSummary>
+            <AccordionDetails>
+              Listing your startup on Earthmates is free. We believe in
+              supporting entrepreneurs by providing them a platform to showcase
+              their innovations without any initial costs.
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              className={styles.accordionSummary}
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel4a-content"
+              id="panel4a-header"
+            >
+              How can I attract investors to my startup profile on Earthmates?
+            </AccordionSummary>
+            <AccordionDetails>
+              To attract investors, ensure your startup profile is complete and
+              compelling. Highlight key aspects such as your business model,
+              market potential, traction, and team expertise. Engage with the
+              Earthmates community and participate in events and pitch sessions.
+            </AccordionDetails>
+          </Accordion>
         </div>
       </div>
       <div className={styles.next_steps}>

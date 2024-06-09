@@ -4,17 +4,20 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  column-gap: 3em;
+  column-gap: 2.5em;
   padding-top: 6em;
   padding-bottom: 6em;
   padding-left: 6em;
-  padding-right: 6em;
+  padding-right: 5em;
   background-color: #0b0b09;
   color: white;
 }
 
 .hero img {
-  width: 50%;
+  @media (max-width: 1050px) {
+    visibility: hidden;
+  }
+  width: 60%;
 }
 
 .hero h1 {
@@ -50,16 +53,16 @@
   padding: 5em;
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  text-align: start;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   row-gap: 1em;
   color: white;
   background-color: #2f2b6f;
 }
 
 .features .button {
-  margin: auto;
+  margin: 0 auto;
 }
 
 .features .h1 {
@@ -74,23 +77,28 @@
   font-weight: 300;
   width: 60%;
   color: #a7b6c1;
-  margin-bottom: 2.5em;
+  margin-bottom: 0.5em;
+  @media (min-width: $mobile-width) {
+    margin-bottom: 2.5em;
+  }
 }
 
 .features-cards {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
   column-gap: 1em;
 
   @media only screen and (max-width: $mobile-width) {
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 1em 1em;
     padding-right: 1em;
     padding-left: 1em;
     padding-top: 3em;
     padding-bottom: 2em;
+    margin-bottom: 1em;
   }
   width: 100%;
 }
@@ -103,7 +111,7 @@
   border-radius: 10px;
 
   @media only screen and (max-width: $mobile-width) {
-    width: calc(50% - 1em);
+    width: 100%;
   }
 }
 
@@ -131,10 +139,7 @@
 
 .difference {
   background-color: #f6f6f6;
-  padding-right: 4em;
-  padding-left: 4em;
-  padding-bottom: 3.5em;
-  padding-top: 3.5em;
+  padding: 3.5em 4em;
 }
 
 .difference .header {
@@ -144,6 +149,10 @@
   justify-content: start;
   column-gap: 1em;
   margin-bottom: 4em;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 1em;
+  }
 }
 
 .difference .header .h1 {
@@ -163,13 +172,14 @@
 
 .difference-cards {
   display: flex;
-  align-items: center;
+  align-items: top;
   flex-direction: row;
   justify-content: center;
   column-gap: 1em;
 
   @media only screen and (max-width: $mobile-width) {
     flex-wrap: wrap;
+    flex-direction: column;
     gap: 1em 1em;
     padding-right: 1em;
     padding-left: 1em;
@@ -187,7 +197,7 @@
   border-radius: 10px;
 
   @media only screen and (max-width: $mobile-width) {
-    width: calc(50% - 1em);
+    width: 100%;
   }
 }
 
@@ -215,10 +225,7 @@
 }
 
 .review {
-  padding-left: 5em;
-  padding-right: 5em;
-  padding-bottom: 5em;
-  padding-top: 5em;
+  padding: 5em;
 }
 
 .review .header {
@@ -228,6 +235,10 @@
   justify-content: center;
   column-gap: 4em;
   margin-bottom: 5em;
+  @media (max-width: 1050px) {
+    margin-bottom: 2em;
+    column-gap: 2em;
+  }
 }
 
 .review .header .h1 {
@@ -239,7 +250,7 @@
 
 .review .header .p {
   font-family: Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 300;
   color: #4a555c;
   margin-top: 2em;
@@ -248,30 +259,44 @@
 
 .review .container {
   display: flex;
-  align-items: start;
+  align-items: center;
   flex-direction: row;
   justify-content: center;
-  column-gap: 7em;
+  column-gap: 6em;
   width: 100%;
-  padding-left: 3em;
-  padding-right: 3em;
+
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1em;
+  }
 }
 
 .review .container .image {
   width: 50%;
+  @media (max-width: 1050px) {
+    width: 100%;
+  }
 }
 
 .review .container .text {
   padding-top: 0%;
   width: 50%;
+  @media (max-width: 1050px) {
+    width: 100%;
+  }
 }
 
 .review .container .h1 {
   font-family: Helvetica, sans-serif;
-  font-size: 32px;
+  font-size: 2em;
   font-weight: 400;
   color: black;
   margin-top: 3em;
+  @media (max-width: 1050px) {
+    margin-top: 1.2em;
+    font-size: 1.8em;
+  }
 }
 
 .review .container .p {
@@ -283,56 +308,79 @@
   margin-right: 0em;
   margin-bottom: 0em;
   margin-left: 0em;
+  @media (max-width: 1050px) {
+    margin-top: 0.8em;
+  }
 }
+
+//faq section
 
 .faq {
-  padding: 5em;
   display: flex;
-  align-items: start;
-  flex-direction: row;
-  justify-content: start;
-  background-color: #f6f6f6;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 2em;
+  }
+  @media (min-width: $mobile-width) {
+    padding: 5em;
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    justify-content: start;
+    background-color: #f6f6f6;
+  }
 }
 
-.faq .header {
+.faq .title_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  row-gap: 0.25em;
-  text-align: start;
-  width: 50%;
-}
+  row-gap: 0.5em;
 
-.faq .header h1 {
-  font-family: $header-font;
-  font-size: 40px;
-  font-weight: 600;
-}
+  text-align: center;
 
-.faq .header p {
+  @media (min-width: $mobile-width) {
+    text-align: start;
+    width: 50%;
+    row-gap: 0.25em;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 2em;
+  }
+
+  .title {
+    font-family: $header-font;
+    font-size: 2em;
+    font-weight: 600;
+  }
+
+  .paragraph {
+    font-family: Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    color: #4a555c;
+    margin: 0 5em;
+
+    @media (min-width: $mobile-width) {
+      width: 50%;
+      margin: 0;
+    }
+  }
+}
+.accordion_container {
   font-family: Helvetica, sans-serif;
-  font-size: 16px;
   font-weight: 300;
-  color: #4a555c;
-  width: 50%;
 }
 
-.faq .questions {
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-  justify-content: center;
-  column-gap: 2em;
-}
-
-.faq .questions h1 {
-  font-family: Helvetica, sans-serif;
-  font-size: 18px;
+.accordionSummary {
   font-weight: 600;
-  color: #001b2e;
-  margin-bottom: 2em;
 }
-
+//////////////////////////////////////////////////////////////////////////////////////////
 .next_steps {
   padding: 5em;
   background-color: #2f2b6f;
