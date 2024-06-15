@@ -12,7 +12,7 @@ export interface ButtonProps {
 }
 
 const defaultClick = () => {
-  window.location.href = "http://192.168.0.125:3000/register";
+  window.location.href = "http://18.159.198.188:3000/register";
 };
 
 export const Button: React.FC<ButtonProps> = ({

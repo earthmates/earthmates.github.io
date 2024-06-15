@@ -31,6 +31,11 @@ export interface HomePageProps {
  * To create custom component templates, see https://help.codux.com/kb/en/article/kb16522
  */
 export const HomePage = ({ className }: HomePageProps) => {
+
+  const linkedinClick = (link: string) => (event: React.MouseEvent<HTMLImageElement>) => {
+    window.location.href = link;
+};
+
   return (
     <div className={classNames(styles.root, className)}>
       <div className={styles.hero}>
@@ -334,7 +339,7 @@ export const HomePage = ({ className }: HomePageProps) => {
                   <h1 className={styles.h1}>Marco Maiworm</h1>
                   <p className={styles.p}>CEO and Network Developer</p>
                 </div>
-                <img src={LinkedinIcon} alt="linkedin" />
+                <img src={LinkedinIcon} alt="linkedin"  style={{ cursor: 'pointer' }}  onClick={linkedinClick("https://www.linkedin.com/in/marco-maiworm/")}/>
               </div>
             </div>
             <div className={styles.member}>
@@ -344,7 +349,7 @@ export const HomePage = ({ className }: HomePageProps) => {
                   <h1 className={styles.h1}>Mohamed Karsan</h1>
                   <p className={styles.p}>Africa Startup Relations</p>
                 </div>
-                <img src={LinkedinIcon} alt="linkedin" />
+                <img src={LinkedinIcon} alt="linkedin" style={{ cursor: 'pointer' }}  onClick={linkedinClick("https://www.linkedin.com/in/mohamed-karsan-1042992ab/")}/>
               </div>
             </div>
             <div className={styles.member}>
@@ -354,7 +359,7 @@ export const HomePage = ({ className }: HomePageProps) => {
                   <h1 className={styles.h1}>Jacopo Ceravolo</h1>
                   <p className={styles.p}>CTO, Full Stack and AI Developer</p>
                 </div>
-                <img src={LinkedinIcon} alt="linkedin" />
+                <img src={LinkedinIcon} alt="linkedin" style={{ cursor: 'pointer' }}  onClick={linkedinClick("https://www.linkedin.com/in/jacopo-ceravolo/")}/>
               </div>
             </div>
             <div className={styles.member}>
@@ -364,7 +369,7 @@ export const HomePage = ({ className }: HomePageProps) => {
                   <h1 className={styles.h1}>Filipe Bertolucci</h1>
                   <p className={styles.p}>Frontend Developer</p>
                 </div>
-                <img src={LinkedinIcon} alt="linkedin" />
+                <img src={LinkedinIcon} alt="linkedin" style={{ cursor: 'pointer' }}  onClick={linkedinClick("https://www.linkedin.com/in/filipe-bertolucci-104374241/")}/>
               </div>
             </div>
           </div>
@@ -376,7 +381,7 @@ export const HomePage = ({ className }: HomePageProps) => {
                   <h1 className={styles.h1}>Francesco Ghelardi</h1>
                   <p className={styles.p}>Backend Developer</p>
                 </div>
-                <img src={LinkedinIcon} alt="linkedin" />
+                <img src={LinkedinIcon} alt="linkedin" style={{ cursor: 'pointer' }}  onClick={linkedinClick("https://www.linkedin.com/in/francesco-ghelardi-2ba4a920b/")}/>
               </div>
             </div>
             <div className={styles.member}>
@@ -386,17 +391,17 @@ export const HomePage = ({ className }: HomePageProps) => {
                   <h1 className={styles.h1}>Adedigba Adediwura</h1>
                   <p className={styles.p}>UX/UI Designer</p>
                 </div>
-                <img src={LinkedinIcon} alt="linkedin" />
+                <img src={LinkedinIcon} alt="linkedin" style={{ cursor: 'pointer' }}  onClick={linkedinClick("https://www.linkedin.com/in/adedigba-adediwura-a2b202227/")}/>
               </div>
             </div>
             <div className={styles.member}>
               <img src={DanielPng} alt="" />
               <div className={styles.description}>
                 <div className={styles.name}>
-                  <h1 className={styles.h1}>Ujoh Daniel</h1>
+                  <h1 className={styles.h1}>Daniel Ujoh</h1>
                   <p className={styles.p}>Costumer Relationships</p>
                 </div>
-                <img src={LinkedinIcon} alt="linkedin" />
+                <img src={LinkedinIcon} alt="linkedin" style={{ cursor: 'pointer' }}  onClick={linkedinClick("https://www.linkedin.com/in/ujohdaniel1696211aa/")}/>
               </div>
             </div>
           </div>
