@@ -85,7 +85,7 @@ export const Header = ({ className }: HeaderProps) => {
         </div>
       )}
       <div className={styles.login}>
-        <a href="http://18.159.198.188:3000/login" className={styles["login-button"]}>
+        <a href="https://app.earthmates.de/login" className={styles["login-button"]}>
           Login
         </a>
         <Button buttonText="Get Started" />
@@ -112,7 +112,7 @@ export const Header = ({ className }: HeaderProps) => {
           </NavLink>
 
           <hr />
-          <a href="http://18.159.198.188:3000/login" className={styles["login-button"]}>
+          <a href="https://app.earthmates.de/login" className={styles["login-button"]}>
             Login
           </a>
           <Button buttonText="Get Started" />
