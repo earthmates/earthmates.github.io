@@ -12,7 +12,7 @@ export interface ButtonProps {
 }
 
 const defaultClick = () => {
-  window.location.href = "http://app.earthmates.de/register";
+  window.location.href = "https://app.earthmates.de/register";
 };
 
 export const Button: React.FC<ButtonProps> = ({
