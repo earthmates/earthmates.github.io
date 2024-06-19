@@ -11,9 +11,15 @@
   padding-right: 5em;
   background-color: #0b0b09;
   color: white;
+
+  //padding problem under 370px
+  @media (max-width: 370px) {
+    padding: 3em 2em;
+  }
 }
 
 .hero img {
+  //image resolution weird
   @media (max-width: 1050px) {
     visibility: hidden;
   }
@@ -22,13 +28,16 @@
 
 .hero h1 {
   font-family: $header-font;
-  font-size: 60px;
+  font-size: 4em;
   font-weight: 600;
+  @media (max-width: 370px) {
+    font-size: 3em;
+  }
 }
 
 .hero p {
   font-family: Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 1em;
   font-weight: 300;
   margin-bottom: 4em;
   margin-top: 2em;
@@ -59,6 +68,11 @@
   row-gap: 1em;
   color: white;
   background-color: #2f2b6f;
+
+  @media (max-width: $mobile-width) {
+    row-gap: 2em;
+    padding: 2em;
+  }
 }
 
 .features .button {
@@ -140,6 +154,9 @@
 .difference {
   background-color: #f6f6f6;
   padding: 3.5em 4em;
+  @media only screen and (max-width: 370px) {
+    padding: 1em 2em;
+  }
 }
 
 .difference .header {
@@ -157,14 +174,14 @@
 
 .difference .header .h1 {
   font-family: $header-font;
-  font-size: 40px;
+  font-size: 2em;
   font-weight: 600;
   margin-bottom: 0.5em;
 }
 
 .difference .header .p {
   font-family: Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 1em;
   font-weight: 300;
   width: 80%;
   color: #001b2e;
@@ -226,6 +243,9 @@
 
 .review {
   padding: 5em;
+  @media (max-width: 370px) {
+    padding: 5em 2em;
+  }
 }
 
 .review .header {
@@ -390,6 +410,9 @@
   flex-direction: column;
   justify-content: center;
   color: white;
+  @media (max-width: 370px) {
+    padding: 5em 2em;
+  }
 }
 
 .next_steps h1 {
