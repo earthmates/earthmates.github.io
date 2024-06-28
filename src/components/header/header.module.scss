@@ -87,7 +87,7 @@ button svg {
   width: auto; // Let the width adjust automatically
 }
 
-@media only screen and (max-width: ($mobile-width + 107)) {
+@media only screen and (max-width: ($mobile-width)) {
   .menu,
   .login {
     display: none;
