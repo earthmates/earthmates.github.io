@@ -11,6 +11,11 @@
   padding-right: 5em;
   background-color: #0b0b09;
   color: white;
+
+   //padding problem under 370px
+   @media (max-width: 370px) {
+    padding: 3em 2em;
+  }
 }
 
 .hero img {
@@ -27,7 +32,7 @@
   font-size: 4em;
   font-weight: 600;
   @media (max-width: 370px) {
-    font-size: 3em;
+    font-size: 2.7em;
   }
 }
 
