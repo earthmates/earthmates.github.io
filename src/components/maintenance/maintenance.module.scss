@@ -1,0 +1,436 @@
+@import "@styles/theme.module.scss";
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1em;
+  padding-top: 6em;
+  padding-bottom: 6em;
+  padding-left: 6em;
+  padding-right: 6em;
+  background-color: #0b0b09;
+  color: white;
+
+  //padding problem under 370px
+  @media (max-width: 370px) {
+    padding: 3em 2em;
+  }
+}
+
+.hero img {
+  //image resolution weird
+  @media (max-width: 1050px) {
+    visibility: hidden;
+    width: 0%;
+  }
+  width: 60%;
+}
+
+.hero h1 {
+  font-family: $header-font;
+  font-size: 4em;
+  font-weight: 600;
+  @media (max-width: 370px) {
+    font-size: 3em;
+  }
+}
+
+.hero p {
+  font-family: Helvetica, sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-bottom: 4em;
+  margin-top: 2em;
+}
+
+.hero button {
+  font-family: $paragraph-font;
+  font-size: 16px;
+  font-weight: 300;
+  background-color: #202020;
+  border-radius: 30px;
+  padding: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.features {
+  padding: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  row-gap: 1em;
+  color: white;
+  background-color: #2f2b6f;
+
+  @media (max-width: $mobile-width) {
+    row-gap: 2em;
+    padding: 2em;
+  }
+}
+
+.features .button {
+  margin: 0 auto;
+}
+
+.features .h1 {
+  font-family: $header-font;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.features .p {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  width: 60%;
+  color: #a7b6c1;
+  margin-bottom: 0.5em;
+  @media (min-width: $mobile-width) {
+    margin-bottom: 2.5em;
+  }
+}
+
+.features-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2em;
+  column-gap: 1em;
+
+  @media only screen and (max-width: $mobile-width) {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1em 1em;
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-top: 3em;
+    padding-bottom: 2em;
+    margin-bottom: 1em;
+  }
+  width: 100%;
+}
+
+.features-cards .card {
+  text-align: start;
+  padding: 1.5em;
+  width: 33%;
+  background-color: white;
+  border-radius: 10px;
+
+  @media only screen and (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.features-cards .card .h1 {
+  font-family: $header-font;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 1em;
+  color: #0b0b09;
+  @media only screen and (max-width: 550px) {
+    font-size: 1em;
+  }
+}
+
+.features-cards .card p {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #4a555c;
+
+  @media only screen and (max-width: 550px) {
+    font-size: 1em;
+  }
+}
+
+.difference {
+  background-color: #f6f6f6;
+  padding: 3.5em 4em;
+  @media only screen and (max-width: 370px) {
+    padding: 1em 2em;
+  }
+}
+
+.difference .header {
+  display: flex;
+  align-items: start;
+  flex-direction: row;
+  justify-content: start;
+  column-gap: 1em;
+  margin-bottom: 4em;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 1em;
+  }
+}
+
+.difference .header .h1 {
+  font-family: $header-font;
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.difference .header .p {
+  font-family: Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  width: 80%;
+  color: #001b2e;
+}
+
+.difference-cards {
+  display: flex;
+  align-items: top;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 1em;
+
+  @media only screen and (max-width: $mobile-width) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1em 1em;
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-top: 3em;
+    padding-bottom: 2em;
+  }
+  width: 100%;
+}
+
+.difference-cards .card {
+  text-align: start;
+  padding: 1.5em;
+  width: 33%;
+  background-color: white;
+  border-radius: 10px;
+
+  @media only screen and (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.difference-cards .card .h1 {
+  font-family: $header-font;
+  font-size: 22px;
+  font-weight: 600;
+  color: #0b0b09;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  @media only screen and (max-width: 550px) {
+    font-size: 1em;
+  }
+}
+
+.difference-cards .card .p {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #4a555c;
+
+  @media only screen and (max-width: 550px) {
+    font-size: 1em;
+  }
+}
+
+.review {
+  padding: 5em;
+  @media (max-width: 370px) {
+    padding: 5em 2em;
+  }
+}
+
+.review .header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 4em;
+  margin-bottom: 5em;
+  @media (max-width: 1050px) {
+    margin-bottom: 2em;
+    column-gap: 2em;
+  }
+}
+
+.review .header .h1 {
+  font-family: $header-font;
+  font-size: 32px;
+  font-weight: 600;
+  width: 50%;
+}
+
+.review .header .p {
+  font-family: Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: #4a555c;
+  margin-top: 2em;
+  width: 50%;
+}
+
+.review .container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 6em;
+  width: 100%;
+
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1em;
+  }
+}
+
+.review .container .image {
+  width: 50%;
+  @media (max-width: 1050px) {
+    width: 100%;
+  }
+}
+
+.review .container .text {
+  padding-top: 0%;
+  width: 50%;
+  @media (max-width: 1050px) {
+    width: 100%;
+  }
+}
+
+.review .container .h1 {
+  font-family: Helvetica, sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+  color: black;
+  margin-top: 3em;
+  @media (max-width: 1050px) {
+    margin-top: 1.2em;
+    font-size: 1.8em;
+  }
+}
+
+.review .container .p {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #4a555c;
+  margin-top: 4em;
+  margin-right: 0em;
+  margin-bottom: 0em;
+  margin-left: 0em;
+  @media (max-width: 1050px) {
+    margin-top: 0.8em;
+  }
+}
+
+//faq section
+
+.faq {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 2em;
+  }
+  @media (min-width: $mobile-width) {
+    padding: 5em;
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    justify-content: start;
+    background-color: #f6f6f6;
+  }
+}
+
+.faq .title_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 0.5em;
+
+  text-align: center;
+
+  @media (min-width: $mobile-width) {
+    text-align: start;
+    width: 50%;
+    row-gap: 0.25em;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 2em;
+  }
+
+  .title {
+    font-family: $header-font;
+    font-size: 2em;
+    font-weight: 600;
+  }
+
+  .paragraph {
+    font-family: Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    color: #4a555c;
+    margin: 0 5em;
+
+    @media (min-width: $mobile-width) {
+      width: 50%;
+      margin: 0;
+    }
+  }
+}
+.accordion_container {
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+.accordionSummary {
+  font-weight: 600;
+}
+//////////////////////////////////////////////////////////////////////////////////////////
+.next_steps {
+  padding: 5em;
+  background-color: #2f2b6f;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  @media (max-width: 370px) {
+    padding: 5em 2em;
+  }
+}
+
+.next_steps h1 {
+  font-family: $header-font;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 0.25em;
+}
+
+.next_steps p {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 4em;
+}
+
+.connect_with {
+  min-width: auto;
+  max-width: 3em;
+}
