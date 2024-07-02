@@ -76,41 +76,42 @@ export const HomePage = ({ className }: HomePageProps) => {
             year we will invite the best Applicants to our EarthMates Gathering
             event in Berlin - fully sponsored.
           </p>
-          <p>You can apply if you fulfill these criteria:</p>
-          <div className="criteria">
-            <div className="criterion">
+
+          <div className={styles.criteria}>
+            <p>You can apply if you fulfill these criteria:</p>
+            <div className={styles.criterion}>
               <img src={requirementIcon1} alt="icon" />
               <p>You must be registered.</p>
             </div>
-            <div className="criterion">
+            <div className={styles.criterion}>
               <img src={requirementIcon2} alt="icon" />
               <p>You must fulfill some SDGs (Sustainable Development Goals).</p>
             </div>
-            <div className="criterion">
+            <div className={styles.criterion}>
               <img src={requirementIcon3} alt="icon" />
               <p>Measurable impact should be embodied in your strategy.</p>
             </div>
-            <div className="criterion">
+            <div className={styles.criterion}>
               <img src={requirementIcon4} alt="icon" />
               <p>You must solve real-world problems.</p>
             </div>
-            <div className="criterion">
+            <div className={styles.criterion}>
               <img src={requirementIcon5} alt="icon" />
               <p>You must have solid financials.</p>
             </div>
-            <div className="criterion">
+            <div className={styles.criterion}>
               <img src={requirementIcon6} alt="icon" />
               <p>
                 You should have a minimum viable product (MVP) ready to
                 showcase.
               </p>
             </div>
-            <div className="criterion">
+            <div className={styles.criterion}>
               <img src={requirementIcon7} alt="icon" />
               <p>You are a pre-seed or seed stage startup</p>
             </div>
-            <Button buttonText="Apply Now" />
           </div>
+          <Button buttonText="Apply Now" />
         </div>
       </div>
 
